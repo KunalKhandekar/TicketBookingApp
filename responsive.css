@@ -1,0 +1,170 @@
+@media screen and (max-width: 1020px) {
+    .container {
+        max-width: 890px;
+    }
+
+    .banner {
+        max-width: 1020px;
+        padding: 0 30px;
+    }
+
+    .upcoming .movie-list .movie {
+        width: 245px;
+    }
+
+    .upcoming .movie-list .movie .image .release-date {
+        bottom: 6px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .container {
+        max-width: 690px;
+    }
+
+    .banner {
+        max-width: 860px;
+    }
+
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .foot-logo {
+        width: 45%;
+        text-align: center;
+    }
+
+    footer .foot-content {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .upcoming .movie-list .movie {
+        width: 325px;
+    }
+
+}
+
+@media screen and (max-width: 740px) {
+    .container {
+        max-width: 590px;
+    }
+
+    .banner {
+        max-width: 760px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .carousel-box {
+        width: 100%;
+        height: 50%;
+    }
+
+    .content {
+        max-width: 100%;
+        height: 50%;
+    }
+
+    .upcoming .movie-list .movie {
+        width: 245px;
+    }
+
+    .event-box {
+        width: 180px;
+        height: 181px;
+    }
+
+    .live-events {
+        padding-inline: 10px;
+    }.upcoming .movie-list .movie .image .release-date {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 590px) {
+    .container {
+        max-width: 430px;
+    }
+
+    nav {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .arrows {
+        top: 18%;
+    }
+
+    .slider .list .item .content {
+        top: 30%;
+    }
+
+    .upcoming .movie-list .movie {
+        width: 196px;
+    }
+
+    .event-box {
+        width: 170px;
+        height: 170px;
+    }
+
+    .live-events {
+        padding-inline: 0px;
+      }
+
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        max-width: 297px;
+    }
+
+    nav ul {
+        margin: auto;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    .arrows {
+        top: 20%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .foot-logo {
+        width: 70%;
+        text-align: center;
+    }
+
+    footer .foot-content p {
+        font-size: 12px;
+    }
+
+    footer .foot-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .upcoming .movie-list .movie {
+        width: 270px;
+    }
+
+    .event-box {
+        width: 160px;
+        height: 160px;
+
+    }
+}

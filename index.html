@@ -1,15 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
+
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div id="logo">
+                    <img src="./img/logo.png" alt="logo">
+                </div>
+                <div id="selection">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>
+                                Home</a></li>
+                        <li><a href="#"><i class="fa fa-film" aria-hidden="true"></i>
+                                Movies</a></li>
+                        <li><a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>
+                                Tickets</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="slider">
+        <!-- list Items -->
+        <div class="list">
+            <div class="item active">
+                <img src="./image/banner/1.avif">
+                <div class="content">
+                    <p></p>
+                    <h2><img src="./image/title/1.png" alt=""></h2>
+                    <p>
+                        Kabir and his family`s fun weekend retreat takes a nightmarish turn when they let a friendly but mysterious stranger into their house....
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./image/banner/2.avif">
+                <div class="content">
+                    <p></p>
+                    <h2><img src="./image/title/2.png" alt=""></h2>
+                    <p>
+                        Three childhood friends embark on a trip to Goa that goes completely off-track when they wake up in a hotel room and find cocaine that belongs to a don named Mendoza.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./image/banner/3.avif">
+                <div class="content">
+                    <p></p>
+                    <h2><img src="./image/title/3.png" alt=""></h2>
+                    <p>
+                        Po faces his greatest challenge yet when he ventures to the big city and meets a new villain called the Chameleon.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./image/banner/4.jpg">
+                <div class="content">
+                    <p></p>
+                    <h2><img src="./image/title/4.png" alt=""></h2>
+                    <p>
+                        A high-octane action thriller that outlines the emotional journey of a man who is set to rectify the wrongs in society.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./image/banner/5.avif">
+                <div class="content">
+                    <p></p>
+                    <h2>
+                        <img src="./image/title/5.png" alt="">
+                    </h2>
+                    <p>
+                        After failing at an important mission - years later, the system is shocked to find Arun on board in very mysterious circumstances on a hijacked flight. All evidence points towards Arun being on a mission for revenge against the system that snatched everything away from him.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./image/banner/6.avif">
+                <div class="content">
+                    <p></p>
+                    <h2>
+                        <img src="./image/title/6.png" alt="">
+                    </h2>
+                    <p>
+                        Three ordinary air hostesses from Mumbai embark on a journey to pursue their dreams but find themselves caught up in unexpected misfortunes. 
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./image/banner/7.webp">
+                <div class="content">
+                    <p></p>
+                    <h2>
+                        <img src="./image/title/7.png" alt="">
+                    </h2>
+                    <p>
+                        This is the story of a son whose love for his father knows no bounds. As their bond begins to fracture, a chain of extraordinary events unfold causing the son to undergo a remarkable transformation consumed by a thirst for vengeance.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="./image/poster/1.avif">
+            </div>
+            <div class="item">
+                <img src="./image/poster/2.avif">
+            </div>
+            <div class="item">
+                <img src="./image/poster/3.avif">
+            </div>
+            <div class="item">
+                <img src="./image/poster/4.jpg">
+            </div>
+            <div class="item">
+                <img src="image/poster/5.avif">
+            </div>
+            <div class="item">
+                <img src="image/poster/6.avif">
+            </div>
+            <div class="item">
+                <img src="image/poster/7.avif">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="events">
+            <h2>The Best Of Live Events</h2>
+            <div class="live-events">
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:w-300/ipl-2024-web-collection-202403130643.png"
+                        alt="e1">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MiBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/holi-parties-web-collection-202402261056.png"
+                        alt="e2">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTI1KyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png"
+                        alt="e3">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MjUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/kids-zone-collection-202211140440.png"
+                        alt="e4">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTQwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png"
+                        alt="e5">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTAwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png"
+                        alt="e6">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-OSBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/upskill-collection-202211140440.png"
+                        alt="e7">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/interactive-games-collection-202211140440.png"
+                        alt="e8">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png"
+                        alt="e9">
+                </div>
+                <div class="event-box">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTQwKyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/theatre-shows-collection-202211140440.png"
+                        alt="e10">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="upcoming">
+            <h2>Upcoming Movies in India</h2>
+            <div class="movie-list">
+                <div class="movie">
+                    <div class="image">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/cinema/crew-655d3fc0-d603-11ee-a9f8-af6625610d3c.jpg?format=webp&imwidth=412">
+
+                        <div class="release-date">
+                            <p>Release Date</p>
+                            <p>29 Mar 24</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="movie">
+                    <div class="image">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/cinema/GK-a5a57660-e684-11ee-a298-9bd2418f9c8c.jpg?format=webp&imwidth=412">
+
+                        <div class="release-date">
+                            <p>Release Date</p>
+                            <p>29 Mar 24</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="movie">
+                    <div class="image">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/cinema/Yuva-540685d0-c41e-11ed-9bb0-4508532fbfd3.jpg?format=webp&imwidth=412">
+
+                        <div class="release-date">
+                            <p>Release Date</p>
+                            <p>29 Mar 24</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="movie">
+                    <div class="image">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/cinema/Bengal-1947%20(2)-28788c00-e048-11ee-a3c7-f5f87f3f5d73.jpg?format=webp&imwidth=412">
+
+                        <div class="release-date">
+                            <p>Release Date</p>
+                            <p>29 Mar 24</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="movie">
+                    <div class="image">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/cinema/Hot-Spot-English-Ap--poster-196ccdd0-e394-11ee-b37f-29404991a0ba.jpg?format=webp&imwidth=412">
+
+                        <div class="release-date">
+                            <p>Release Date</p>
+                            <p>29 Mar 24</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="movie">
+                    <div class="image">
+                        <img
+                            src="https://assetscdn1.paytm.com/images/cinema/knox_UPCOMING_-e1108190-dac2-11ee-a5bd-f9e918a2ec60.jpg?format=webp&imwidth=412">
+
+                        <div class="release-date">
+                            <p>Release Date</p>
+                            <p>29 Mar 24</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider">
+    <div class="container">
+        <footer>
+            <div class="foot-logo">
+                <img src="./img/logo.png">
+            </div>
+            <div class="foot-content">
+                <p>MoviesHUB® is a registered trademark of Fast-Booking Corporation. © 2024 MoivesHUB Corporation. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
     
-
-
+    <script src="app.js"></script>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/dd262d5bd7.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
 </body>
+
 </html>
