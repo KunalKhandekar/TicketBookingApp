@@ -82,7 +82,9 @@
 
     .live-events {
         padding-inline: 10px;
-    }.upcoming .movie-list .movie .image .release-date {
+    }
+
+    .upcoming .movie-list .movie .image .release-date {
         font-size: 14px;
     }
 
@@ -119,7 +121,7 @@
 
     .live-events {
         padding-inline: 0px;
-      }
+    }
 
 }
 
@@ -136,8 +138,14 @@
         text-align: center;
     }
 
+    nav ul li a {
+        font-size: 14px;
+    }
+
     .arrows {
-        top: 20%;
+        top: 56%;
+        right: 20px;
+
     }
 
     footer {
