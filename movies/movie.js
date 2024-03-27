@@ -37,7 +37,7 @@ function cardAdder( htmlClass,img, title, duration, genre, lang, release, descri
 
 cardAdder(
     "shaitaan",
-    "../image/poster/1.avif",
+    "./image/poster/1.avif",
     "Shaitaan",
     "2h 12m",
     ["Supernatural","Thriller"],
@@ -47,7 +47,7 @@ cardAdder(
 )
 cardAdder(
     "madgaonExpress",
-    "../image/poster/2.avif",
+    "./image/poster/2.avif",
     "Madgaon Express",
     "2h 25m",
     ["Comedy","Drama"],

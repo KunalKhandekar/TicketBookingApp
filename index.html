@@ -18,11 +18,11 @@
                 </div>
                 <div id="selection">
                     <ul>
-                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>
+                        <li><a class="nav_links" href="/index.html"><i class="fa fa-home" aria-hidden="true"></i>
                                 Home</a></li>
-                        <li><a href="#"><i class="fa fa-film" aria-hidden="true"></i>
+                        <li><a class="nav_links" href="/movies.html"><i class="fa fa-film" aria-hidden="true"></i>
                                 Movies</a></li>
-                        <li><a href="#"><i class="fa fa-ticket" aria-hidden="true"></i>
+                        <li><a class="nav_links" href="/ticket.html"><i class="fa fa-ticket" aria-hidden="true"></i>
                                 Tickets</a></li>
                     </ul>
                 </div>
@@ -292,20 +292,8 @@
     
     <script src="./Home/app.js"></script>
     <script src="./Home/script.js"></script>
+    <script src="pageChanger.js"></script>
     <script src="https://kit.fontawesome.com/dd262d5bd7.js" crossorigin="anonymous"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            var instances = M.Carousel.init(elems, options);
-        });
-
-        // Or with jQuery
-
-        $(document).ready(function () {
-            $('.carousel').carousel();
-        });
-    </script>
 </body>
 
 </html>

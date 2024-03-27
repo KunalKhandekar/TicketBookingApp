@@ -63,6 +63,10 @@ nav ul li a>i {
     margin-right: 2px;
 }
 
+.navactive {
+    color: #F9D423;
+}
+
 /* NavBar Ends Here */
 
 .book {
