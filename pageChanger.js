@@ -1,7 +1,11 @@
 const navlinkss = document.querySelectorAll(".nav_links");
 
-Array.from(navlinkss).forEach(element => {
-    if (element.href.includes(window.location.pathname)) {
+const alllinkTags = Array.from(navlinkss);
+
+alllinkTags.forEach(element => {
+    const navpathname = new URL(element.href).pathname;
+
+    if ((window.location.pathname === navpathname) || (window.location.pathname) === "/index.html" && (navpathname === "/")) {
         element.classList.add("navactive")
     }
 });
