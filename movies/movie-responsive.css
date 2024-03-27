@@ -1,0 +1,153 @@
+@media screen and (max-width: 1480px) {
+    .book {
+        margin-inline: 20px;
+    }
+
+    .book .details .content .desc {
+        font-size: 16px;
+        height: 75px;
+        overflow: scroll;
+    }
+
+    .book .details .content .desc::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .book .details .content .desc {
+        font-size: 18px;
+    }
+
+    .book .details .content .release span {
+        font-size: 16px;
+    }
+
+    .book .details .content>button {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .book .details .content .desc {
+        width: 100%;
+    }
+
+    .book .details .content .title-line h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+
+    .book .details {
+        height: 305px;
+        margin-top: 100px;
+    }
+
+    .book .details .image img {
+        width: 230px;
+        top: -90px;
+    }
+
+    .book .details .content .title-line h2 {
+        font-size: 21px;
+    }
+
+    .book .details .content .capsule span {
+        font-size: 15px;
+    }
+
+    .book .details .content .release span {
+        font-size: 15px;
+    }
+
+    .book .details .content>button {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .book .details {
+        margin-top: 85px;
+    }
+
+    .book .details .image img {
+        width: 200px;
+        top: -60px;
+
+    }
+
+    .book .details .content .title-line h1 {
+        font-size: 28px;
+    }
+
+    .book .details .content .title-line h2 {
+        font-size: 18px;
+    }
+
+    .book .details .content .desc {
+        font-size: 14px;
+    }
+
+    .book .details .content .desc::-webkit-scrollbar {
+        display: none;
+    }
+
+    .book .details .content .capsule span {
+        font-size: 13px;
+    }
+
+    .book .details .content .release span {
+        font-size: 13px;
+    }
+
+    .book .details .content>button {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .container {
+        max-width: 430px;
+    }
+
+    nav {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book .details {
+        height: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .book .details .image {
+        text-align: center;
+    }
+
+    .book .details .content {
+        margin-top: -35px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        max-width: 297px;
+    }
+
+    nav ul {
+        margin: auto;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}

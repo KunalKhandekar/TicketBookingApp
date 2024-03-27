@@ -1,0 +1,200 @@
+/* Fonts Imported */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+/* CSS Modified */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Truculenta", sans-serif;
+}
+
+body {
+    background-color: #272727;
+    color: #eee;
+}
+
+header {
+    background-color: #181818;
+}
+
+/* Big Container for max-width */
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+nav #logo img {
+    width: 170px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+nav ul li a>i {
+    margin-right: 2px;
+}
+
+/* NavBar Ends Here */
+
+.book {
+    max-width: 1480px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.book .details::before {
+    content: '';
+    position: absolute;
+    background: url('') center 0px/cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    border-radius: 10px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.book .details {
+    display: flex;
+    color: #ffffff;
+    gap: 30px;
+    width: 100%;
+    height: 335px;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 130px;
+}
+
+.book .details::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(20deg, transparent, #000);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.book .details .image img {
+    width: 270px;
+    position: relative;
+    top: -110px;
+    border-radius: 10px;
+    box-shadow: #fffffffa 0px 2px 5px -1px, #0000006a 0px 1px 3px -1px;
+}
+
+.book .details .content::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to left, #00000090, transparent);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.book .details .content {
+    width: 100%;
+}
+
+.book .details .content .title-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.book .details .content .title-line h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.book .details .content .capsule {
+    margin-top: 15px;
+}
+
+.book .details .content .capsule span {
+    padding: 5px 20px;
+    background-color: #272727;
+    color: #ffffff;
+    margin-right: 6px;
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.book .details .content .release {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.book .details .content .release span {
+    font-size: 17px;
+    padding-inline: 10px;
+    border-right: 0.5px solid #fff;
+    text-decoration: underline;
+}
+
+.book .details .content .release span:first-child {
+    padding-left: 0px;
+}
+
+.book .details .content .release span:last-child {
+    border-right: none;
+}
+
+.book .details .content .desc {
+    width: 75%;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.11;
+}
+
+.book .details .content>button {
+    margin-block: 15px;
+    padding: 10px 45px;
+    text-align: center;
+    background-color: rgb(255, 50, 50);
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+}

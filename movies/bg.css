@@ -1,0 +1,27 @@
+.book .details.shaitaan::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/shaitaan-et00384234-1706179766.jpg') center 0px/cover;
+}
+
+.book .details.madgaonExpress::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/madgaon-express-et00341317-1711080867.jpg') center 0px/cover;
+}
+
+.book .details.veer::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/swatantra-veer-savarkar-et00330062-1709646313.jpg') center 0px/cover;
+}
+
+.book .details.panda::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kung-fu-panda-4-et00379741-1706177646.jpg') center 0px/cover;
+}
+
+.book .details.yodha::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/yodha-et00318073-1710241050.jpg') center 0px/cover;
+}
+
+.book .details.article370::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/article-370-et00384444-1708669471.jpg') center 0px/cover;
+}
+
+.book .details.dune::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/dune-part-two-et00331567-1706167890.jpg') center 0px/cover;
+}
