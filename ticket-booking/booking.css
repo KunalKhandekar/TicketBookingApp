@@ -1,0 +1,416 @@
+/* Fonts Imported */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+/* CSS Modified */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Truculenta", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #eee;
+}
+
+
+.book {
+    max-width: 1480px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.book .details::before {
+    content: '';
+    position: absolute;
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/shaitaan-et00384234-1706179766.jpg') center 0px/cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    border-radius: 10px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.book .details {
+    display: flex;
+    color: #ffffff;
+    gap: 30px;
+    width: 100%;
+    height: 335px;
+    position: relative;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 130px;
+}
+
+.book .details::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(20deg, transparent, #000);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.book .details .image img {
+    width: 270px;
+    position: relative;
+    top: -110px;
+    border-radius: 10px;
+    box-shadow: #fffffffa 0px 2px 5px -1px, #0000006a 0px 1px 3px -1px;
+}
+
+.book .details .content::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to left, #00000090, transparent);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.book .details .content {
+    width: calc(100% - 300px);
+}
+
+.book .details .content .title-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.book .details .content .title-line h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+
+/* date Slides starts */
+
+.date-selector {
+    margin-top: 25px;
+}
+
+.wrapper {
+    padding: 15px;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 1000px;
+    background: #0000007f;
+    border-radius: 13px;
+}
+
+.date {
+    width: 100%;
+}
+
+.wrapper .icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.icon:first-child {
+    left: 0;
+    display: none;
+    background: linear-gradient(90deg, #080808 70%, transparent);
+}
+
+.icon:last-child {
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, #080808 70%, transparent);
+}
+
+.icon i {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+}
+
+.icon:first-child i:hover,
+.icon:last-child i:hover {
+    background: #efedfb;
+    color: #000;
+}
+
+.icon:first-child i {
+    margin-left: 15px;
+}
+
+.icon:last-child i {
+    margin-right: 15px;
+}
+
+.wrapper .tabs-box {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.tabs-box.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.tabs-box .tab {
+    cursor: pointer;
+    font-size: 18px;
+    white-space: nowrap;
+    background: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    border: 1px solid #d8d5f2;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tabs-box .tab:hover {
+    background: rgb(255, 50, 50);
+}
+
+.tabs-box.dragging .tab {
+    user-select: none;
+    pointer-events: none;
+}
+
+.tabs-box .tab.active {
+    color: #fff;
+    background: rgb(255, 50, 50);
+    border-color: #fff;
+}
+
+
+/* Seats section */
+.book2 {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.screen {
+    background-color: #fff;
+    height: 573px;
+    width: 1080px;
+    margin: auto;
+    transform: rotateX(-69deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+    position: relative;
+    margin-top: -120px;
+    text-align: center;
+}
+
+.trailer .screen h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -80px;
+    font-size: 45px;
+    transform: rotateX(0deg);
+}
+
+.screen video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.trailer {
+    border: 2px dotted rgb(255, 255, 255);
+    overflow: scroll;
+    margin-inline: 15px;
+}
+
+.trailer::-webkit-scrollbar {
+    display: none;
+}
+
+.trailer .seats {
+    width: 1100px;
+    padding: 30px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    box-sizing: border-box;
+    margin-top: -160px;
+}
+
+.trailer .seats .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding-inline: 40px;
+}
+
+.trailer .seats .row .chair {
+    border: 0.25px solid white;
+    border-radius: 7px;
+    padding: 4px 6px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.trailer .seats .row .chair.num {
+    padding-inline: 12px;
+    width: 35px;
+    border: none;
+}
+
+.trailer .seats .row .chair.num::before {
+    width: 0%;
+}
+
+.trailer .seats .row .chair::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #d6cece3b;
+    bottom: -10px;
+    border-radius: 10px;
+    left: 0;
+}
+
+.trailer .seats .row .chair:nth-child(5) {
+    margin-right: 20px;
+}
+
+.trailer .seats .row .chair:nth-last-child(5) {
+    margin-left: 20px;
+}
+
+.trailer .seats .row span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.trailer .seats .row .chair.booked {
+    background-color: red !important;
+    color: #ffffff;
+}
+
+.trailer .seats .row .chair.selected {
+    background-color: rgb(165, 227, 32) !important;
+    color: #000000;
+    border-color: #fff;
+}
+
+.seat-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 25px;
+    width: 100vw;
+}
+
+.seat-detail li {
+    list-style: none;
+    position: relative;
+    border-radius: 5px;
+    transition: 0.3s linear;
+    margin: 0 25px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.seat-detail li::before {
+    position: absolute;
+    content: '280';
+    width: 27px;
+    background: #d8d5f2;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    top: 3px;
+    left: -35px;
+    transition: 0.3s linear;
+}
+
+.seat-detail li::after {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 3px;
+    background-color: #d6cece3b;
+    bottom: -5px;
+    border-radius: 10px;
+    left: -33px;
+}
+
+.seat-detail li:nth-child(3)::before {
+    background-color: red;
+}
+
+.seat-detail li:nth-child(2)::before {
+    background-color: rgb(165, 227, 32);
+    color: #000;
+}
+
+.seat-detail li:nth-child(1)::before {
+    background-color: transparent;
+}
+
+.book2 button {
+    padding: 10px 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: rgb(234, 42, 42);
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 25px;
+    width: 100vw;
+}
+
+.book2 button:hover {
+    background-color: rgb(232, 11, 11);
+}

@@ -111,8 +111,4 @@ cardAdder(
     "1 Mar, 2024",
     "Dune: Part Two will explore the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a warpath of revenge against the conspirators who destroyed his family. Facing a choice between the love and the fate of the known universe, he endeavors to prevent a terrible future only he can foresee."
 )
-
-
-
-
-changeBefore();
+ 

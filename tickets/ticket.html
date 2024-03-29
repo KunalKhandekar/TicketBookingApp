@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ticket</title>
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="ticket-responsive.css">
+    <link rel="stylesheet" href="bg.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div id="logo">
+                    <img src="../image/logo.png" alt="logo">
+                </div>
+                <div id="selection">
+                    <ul>
+                        <li><a class="nav_links" href="/index.html"><i class="fa fa-home" aria-hidden="true"></i>
+                            Home</a></li>
+                    <li><a class="nav_links" href="/movies.html"><i class="fa fa-film" aria-hidden="true"></i>
+                            Movies</a></li>
+                    <li><a class="nav_links" href="/ticket.html"><i class="fa fa-ticket" aria-hidden="true"></i>
+                            Tickets</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="ticket-container">
+        
+    </section>
+
+
+    <script src="ticket.js"></script>
+    <script src="https://kit.fontawesome.com/dd262d5bd7.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.js" integrity="sha512-wkHtSbhQMx77jh9oKL0AlLBd15fOMoJUowEpAzmSG5q5Pg9oF+XoMLCitFmi7AOhIVhR6T6BsaHJr6ChuXaM/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        JsBarcode("#barcode", "J15280282024");
+    </script>
+</body>
+</html>
