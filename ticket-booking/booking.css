@@ -216,7 +216,7 @@ body {
 .screen {
     background-color: #fff;
     height: 573px;
-    width: 1080px;
+    width: 1020px;
     margin: auto;
     transform: rotateX(-69deg);
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
@@ -388,7 +388,7 @@ body {
     background-color: transparent;
 }
 
-.book2 button {
+.btn {
     padding: 10px 50px;
     border: 1px solid #fff;
     color: #fff;
@@ -404,7 +404,7 @@ body {
 }
 
 .next-button {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     margin-block: 25px;
@@ -413,4 +413,8 @@ body {
 
 .book2 button:hover {
     background-color: rgb(232, 11, 11);
+}
+
+#button-p {
+    display: none;
 }

@@ -202,4 +202,10 @@ nav ul li a>i {
     border: none;
     border-radius: 8px;
     color: #fff;
+    cursor: pointer;
+}
+
+.book .details .content>button a {
+    color: #fff;
+    text-decoration: none;
 }

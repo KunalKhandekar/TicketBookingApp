@@ -1,0 +1,108 @@
+
+document.querySelector('#button-n').addEventListener("click", () => {
+    const selectedChairs = document.querySelectorAll('.chair.selected');
+    selectedChairs.forEach(element => {
+        const seat_no = element.getAttribute('book');
+        const seat_sr = element.getAttribute('sr').toLocaleLowerCase();
+
+        let obj = {
+            movie: movie,
+            date: activeTabInnerText,
+        }
+
+        let getData = pvr.map((obj) => {
+            if (obj.movie === movie && obj.date === activeTabInnerText) {
+                obj[seat_sr].push(+seat_no);
+
+            }
+            return obj;
+        });
+
+        document.querySelector('.seats').innerHTML = '';
+        filterPVRByDate(activeTabInnerText);
+
+
+        document.querySelector('header').style.display = 'unset'
+        document.querySelector('.ticket-container').style.display = 'block'
+        document.querySelector('.book').style.display = 'none'
+        document.querySelector('.book2').style.display = 'none'
+        document.querySelector('.seat-detail').style.display = 'none'
+        document.getElementById('button-n').style.display = 'none'
+        document.getElementById('button-p').style.display = 'flex'
+
+        let dateofshow = activeTabInnerText.split(' ');
+        generateTicket(
+            seat_sr.toLocaleUpperCase(),
+            [dateofshow[0], dateofshow[1]],
+            seat_no,
+            movie,
+            "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/jawan-et00330424-1693892482.jpg",
+            `#barcode${seat_sr.toLocaleUpperCase()}`
+        )
+
+        JsBarcode(`#barcode${seat_sr.toLocaleUpperCase()}`, `${seat_sr.toLocaleUpperCase()}${seat_no}${element.innerText}${activeTabInnerText}`);
+    });
+})
+
+function generateTicket(Row, [Day, month], SeatNo, MovieName, urlmovie, barcode) {
+    const ticketTemp = `<div class="barcode">
+    <div class="card">
+        <h6>ROW ${Row}</h6>
+        <h6>${Day} ${month}</h6>
+    </div>
+    <div class="card">
+        <h6>Seat ${SeatNo}</h6>
+        <h6>06:00 PM</h6>
+    </div>
+
+    <svg id=${barcode}></svg>
+
+    <h5>
+        <img src="../image/logo.png">
+    </h5>
+</div>
+<div class="tic-details">
+    <div class="type">4DX</div>
+    <h5 class="pvr"><span>Movies</span>HUB</h5>
+    <h1>${MovieName}</h1>
+    <div class="seat-det">
+        <div class="seat-cr">
+            <h6>ROW</h6>
+            <h6>${Row}</h6>
+        </div>
+        <div class="seat-cr">
+            <h6>SEAT</h6>
+            <h6>${SeatNo}</h6>
+        </div>
+        <div class="seat-cr">
+            <h6>DATE</h6>
+            <h6>${Day} <sub>${month}</sub></h6>
+        </div>
+        <div class="seat-cr">
+            <h6>TIME</h6>
+            <h6>06:00 <sub>PM</sub></h6>
+        </div>
+    </div>
+</div>`
+
+    const ticketContainer = document.querySelector(".ticket-container");
+    const NewTicket = document.createElement("div");
+    NewTicket.className = "ticket";
+    NewTicket.innerHTML = ticketTemp;
+    ticketContainer.append(NewTicket);
+    document.querySelector(".tic-details").style.background = `url(${urlmovie}) center 0px/cover`;
+}
+
+
+
+
+document.getElementById('button-p').addEventListener('click', () => {
+    document.querySelector('header').style.display = 'none'
+    document.querySelector('.ticket-container').style.display = 'none'
+    document.querySelector('.book').style.display = 'unset'
+    document.querySelector('.book2').style.display = 'unset'
+    document.querySelector('.seat-detail').style.display = 'flex'
+    document.getElementById('button-n').style.display = 'none'
+    document.getElementById('button-p').style.display = 'none'
+
+})

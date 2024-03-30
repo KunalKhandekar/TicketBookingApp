@@ -1,0 +1,213 @@
+/* Fonts Imported */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+/* CSS Modified */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Truculenta", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #1f1e1e;
+    color: #eee;
+}
+
+header {
+    background-color: #181818;
+    display: none;
+}
+
+/* Big Container for max-width */
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+nav #logo img {
+    width: 170px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+nav ul li a>i {
+    margin-right: 2px;
+}
+
+.navactive {
+    color: #F9D423;
+}
+
+/* NavBar Ends Here */
+
+/* ticketContainer Starts */
+.ticket-container {
+    width: 90vw;
+    margin: auto;
+    max-width: 1480px;
+    margin-top: 15px;
+    display: none;
+}
+
+.ticket-container .ticket {
+    width: 900px;
+    height: 220px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ticket-container .ticket .barcode,
+.ticket-container .ticket .tic-details {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ticket-container .ticket .barcode {
+    width: 300px;
+    padding: 0 20px;
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+
+.ticket-container .ticket .tic-details::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(20deg, transparent, #000);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ticket-container .ticket .barcode .card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #000000;
+    font-size: 18px;
+}
+
+.ticket-container .ticket .barcode .card:nth-child(1) {
+    margin-top: 15px;
+}
+
+.ticket-container .ticket .barcode .card h6 {
+    width: 60%;
+    text-align: left;
+    font-weight: 600;
+}
+
+.ticket-container .ticket .barcode .card h6:nth-child(1) {
+    width: 40%;
+}
+
+.ticket-container .ticket .barcode h5 img {
+    width: 90px;
+    position: absolute;
+    bottom: 2px;
+    left: 36%;
+}
+
+.ticket-container .ticket .tic-details .type {
+    position: absolute;
+    left: 20px;
+    top: 7px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.ticket-container .ticket .tic-details .pvr {
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    font-weight: 600;
+    color: #F9D423;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.ticket-container .ticket .tic-details .pvr span {
+    color: crimson;
+}
+
+.ticket-container .ticket .tic-details h1 {
+    position: absolute;
+    left: 20px;
+    bottom: 80px;
+    z-index: 1;
+}
+
+.ticket-container .ticket .tic-details .seat-det {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 60px;
+    background: linear-gradient(270deg, transparent, rgb(0, 0, 0, .3));
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    z-index: 1;
+}
+
+.ticket-container .ticket .tic-details .seat-det .seat-cr {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.ticket-container .ticket .tic-details .seat-det .seat-cr h6:nth-child(1) {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ticket-container .ticket .tic-details .seat-det .seat-cr h6:nth-child(2) {
+    font-size: 20px;
+    font-weight: 800;
+}
