@@ -1,5 +1,78 @@
 
-import { pvr } from './data.js';
+// import { pvr } from './data.js';
+const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const generateRandomNumbers = () => [...new Set(Array.from({ length: rand(0, 12) }, () => rand(0, 17)))];
+
+const generateNextTenDays = () => {
+    const today = new Date();
+    const days = [];
+    for (let i = 0; i < 10; i++) {
+        const date = new Date(today);
+        date.setDate(date.getDate() + i);
+        const formattedDate = `${date.getDate()} ${date.toLocaleString('default', { month: 'long' })}`;
+        days.push(formattedDate);
+    }
+    return days;
+};
+
+
+const movies = [
+    {
+        movie: 'shaitaan',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/shaitaan-et00384234-1706179766.jpg"
+    },
+    {
+        movie: 'madgaonExpress',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/madgaon-express-et00341317-1711080867.jpg"
+    },
+    {
+        movie: 'veer',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/swatantra-veer-savarkar-et00330062-1709646313.jpg"
+    },
+    {
+        movie: 'panda',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kung-fu-panda-4-et00379741-1706177646.jpg"
+    },
+    {
+        movie: 'yodha',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/yodha-et00318073-1710241050.jpg"
+    },
+    {
+        movie: 'article370',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/article-370-et00384444-1708669471.jpg"
+    },
+    {
+        movie: 'dune',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/dune-part-two-et00331567-1706167890.jpg"
+    }
+];
+
+let pvr = [];
+
+const nextTenDays = generateNextTenDays();
+
+movies.forEach(movie => {
+    nextTenDays.forEach((date, index) => {
+        pvr.push({
+            movie: movie.movie,
+            bgImg: movie.bgImg,
+            series: ['I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'],
+            seat: 18,
+            i: generateRandomNumbers(),
+            h: generateRandomNumbers(),
+            g: generateRandomNumbers(),
+            f: generateRandomNumbers(),
+            e: generateRandomNumbers(),
+            d: generateRandomNumbers(),
+            c: generateRandomNumbers(),
+            b: generateRandomNumbers(),
+            a: generateRandomNumbers(),
+            price: [280, 280, 320, 320, 320, 540, 540, 540, 800],
+            date: nextTenDays[index]
+        });
+    });
+});
 
 
 
@@ -302,6 +375,7 @@ function filterPVRByDate(selectedDate) {
         let data = pvr.filter(obj => obj.date === selectedDate && obj.movie === movie);
         console.log(data)
         if (data.length > 0) {
+            document.getElementById('seatsAdder').innerHTML = '';
             addseats(data);
         } else {
             console.log("No data found for the selected date and movie.");
@@ -366,7 +440,7 @@ document.getElementById('button-n').addEventListener('click', ()=>{
     <div class="tic-details" style="background: url(${backgroundImg}) center 0px/cover;">
         <div class="type">4DX</div>
         <h5 class="pvr"><span>Movies</span>HUB</h5>
-        <h1>${movie.toLocaleUpperCase()}</h1>
+        <h1></h1>
         <div class="seat-det">
             <div class="seat-cr">
                 <h6>ROW</h6>
