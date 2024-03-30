@@ -231,7 +231,7 @@ document.addEventListener("touchend", stopDragging);
 
 let addseats = (arr) => {
     arr.forEach((el) => {
-        const { series, row_section, seat, price, a, b, c, d, e, f, g, h, i } = el;
+        const { series, bgImg, seat, price, a, b, c, d, e, f, g, h, i } = el;
 
 
         for (let index = 0; index < series.length; index++) {
@@ -264,6 +264,7 @@ let addseats = (arr) => {
                 li.id = series[index] + seats;
                 li.setAttribute('book', seats);
                 li.setAttribute('sr', series[index]);
+                li.setAttribute('bgLink', bgImg);
                 li.innerText = price[index];
 
                 li.onclick = () => {
@@ -275,7 +276,8 @@ let addseats = (arr) => {
 
                     let len = Array.from(document.getElementsByClassName('selected')).length;
                     if (len > 0) {
-                        document.getElementById('button-n').style.display = 'flex'
+                        document.getElementById('button-n').style.display = 'flex';
+                        document.getElementById('button-n').scrollIntoView({behavior: "smooth"});
                     } else {
                         document.getElementById('button-n').style.display = 'none'
                     }
@@ -314,6 +316,7 @@ document.getElementById('button-n').addEventListener('click', ()=>{
     Array.from(document.getElementsByClassName('selected')).forEach(el => {
         let seat_no = el.getAttribute('book');
         let seat_sr = el.getAttribute('sr').toLocaleLowerCase();
+        let backgroundImg = el.getAttribute('bgLink');
 
 
         let obj = {
@@ -360,7 +363,7 @@ document.getElementById('button-n').addEventListener('click', ()=>{
             <img src="../image/logo.png">
         </h5>
     </div>
-    <div class="tic-details" style="background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/jawan-et00330424-1693892482.jpg') center 0px/cover;">
+    <div class="tic-details" style="background: url(${backgroundImg}) center 0px/cover;">
         <div class="type">4DX</div>
         <h5 class="pvr"><span>Movies</span>HUB</h5>
         <h1>${movie.toLocaleUpperCase()}</h1>
@@ -386,7 +389,7 @@ document.getElementById('button-n').addEventListener('click', ()=>{
 
         document.getElementById('ticket-cont').appendChild(tic);
 
-        JsBarcode(`#${seat_sr}${seat_no}barcode`, `${seat_sr.toLocaleUpperCase()}${seat_no}${el.innerText}${dateofshow[0]}`);
+        JsBarcode(`#${seat_sr}${seat_no}barcode`, `${seat_sr.toLocaleUpperCase()}${seat_no}${el.innerText}${dateofshow[0]}${Array.from({ length: 5 }, () => Math.floor(Math.random() * 10)).join('')}`);
 
     });
 })
@@ -395,9 +398,11 @@ document.getElementById('button-n').addEventListener('click', ()=>{
 document.getElementById('button-p').addEventListener('click', () => {
     document.querySelector('header').style.display = 'none';
     document.querySelector('.ticket-container').style.display = 'none';
-    document.querySelector('.book').style.display = 'unset';
+    document.querySelector('.book').style.display = 'block';
     document.querySelector('.book2').style.display = 'unset';
     document.querySelector('.seat-detail').style.display = 'flex';
     document.getElementById('button-n').style.display = 'none';
     document.getElementById('button-p').style.display = 'none';
-})
+});
+
+
