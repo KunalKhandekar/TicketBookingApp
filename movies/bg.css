@@ -1,3 +1,10 @@
+.book .details.godzillaXkong::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/godzilla-x-kong-the-new-empire-et00358147-1707980025.jpg') center 0px/cover;
+}
+.book .details.crew::before {
+    background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/crew-2024-et00344265-1709532971.jpg') center 0px/cover;
+}
+
 .book .details.shaitaan::before {
     background: url('https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/shaitaan-et00384234-1706179766.jpg') center 0px/cover;
 }

@@ -19,8 +19,16 @@ const generateNextTenDays = () => {
 
 const movies = [
     {
+        movie: 'godzillaXkong',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/godzilla-x-kong-the-new-empire-et00358147-1707980025.jpg"
+    },
+    {
         movie: 'shaitaan',
         bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/shaitaan-et00384234-1706179766.jpg"
+    },
+    {
+        movie: 'crew',
+        bgImg: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/crew-2024-et00344265-1709532971.jpg"
     },
     {
         movie: 'madgaonExpress',
@@ -81,6 +89,15 @@ let url_segment = url.split('?');
 const movie = (url_segment[1]);
 
 switch (movie) {
+    case "godzillaXkong":
+        movieAdder(
+            "godzillaXkong",
+            "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/godzilla-x-kong-the-new-empire-et00358147-1707980025.jpg",
+            "Godzilla x Kong: The New Empire",
+            "1h 54m",
+            "../trailer/Godzilla x Kong.mp4"
+        );
+        break;
     case "shaitaan":
         movieAdder
             (
@@ -89,6 +106,16 @@ switch (movie) {
                 "Shaitaan",
                 "2h 12m",
                 "../trailer/shaitaan.mp4"
+            );
+        break;
+    case "crew":
+        movieAdder
+            (
+                "crew",
+                "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/crew-2024-et00344265-1709532971.jpg",
+                "Crew",
+                "2h 4m ",
+                "../trailer/Crew.mp4"
             );
         break;
     case "madgaonExpress":

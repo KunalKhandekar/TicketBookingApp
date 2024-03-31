@@ -8,14 +8,10 @@
         padding: 0 30px;
     }
 
-    .upcoming .movie-list .movie {
-        width: 245px;
+    .upcoming .movie-list img {
+        width: 160px;
     }
 
-    .upcoming .movie-list .movie .image .release-date {
-        bottom: 6px;
-        font-size: 16px;
-    }
 }
 
 @media screen and (max-width: 860px) {
@@ -26,6 +22,10 @@
     .banner {
         max-width: 860px;
     }
+
+    .upcoming .movie-list img {
+        width: 155px;
+      }
 
 
     footer {
@@ -42,10 +42,6 @@
         text-align: center;
     }
 
-
-    .upcoming .movie-list .movie {
-        width: 325px;
-    }
 
 }
 
@@ -71,10 +67,6 @@
         height: 50%;
     }
 
-    .upcoming .movie-list .movie {
-        width: 245px;
-    }
-
     .event-box {
         width: 180px;
         height: 181px;
@@ -84,9 +76,9 @@
         padding-inline: 10px;
     }
 
-    .upcoming .movie-list .movie .image .release-date {
-        font-size: 14px;
-    }
+    .upcoming .movie-list img {
+        width: 170px;
+      }
 
 }
 
@@ -110,10 +102,6 @@
         top: 30%;
     }
 
-    .upcoming .movie-list .movie {
-        width: 196px;
-    }
-
     .event-box {
         width: 170px;
         height: 170px;
@@ -122,6 +110,14 @@
     .live-events {
         padding-inline: 0px;
     }
+
+    .event-box img {
+        height: 80%;
+    }
+
+    .upcoming .movie-list img {
+        width: 130px;
+      }
 
 }
 
@@ -145,7 +141,10 @@
     .arrows {
         top: 56%;
         right: 20px;
+    }
 
+    .upcoming .movie-list img {
+        width: 138px;
     }
 
     footer {
@@ -164,10 +163,6 @@
     footer .foot-content {
         width: 100%;
         text-align: center;
-    }
-
-    .upcoming .movie-list .movie {
-        width: 270px;
     }
 
     .event-box {

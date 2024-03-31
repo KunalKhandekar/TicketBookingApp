@@ -335,29 +335,9 @@ svg {
     flex-wrap: wrap;
 }
 
-.upcoming .movie-list .movie {
-    width: 330px;
-    overflow: hidden;
-    font-size: 21px;
-    border-radius: 16px;
-}
-
-.upcoming .movie-list .movie .image {
-    text-align: center;
-    position: relative;
-}
-
-.upcoming .movie-list .movie .image img {
-    width: 100%;
-}
-
-.upcoming .movie-list .movie .image .release-date {
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    position: absolute;
-    bottom: 7px;
+.upcoming .movie-list img {
+    width: 190px;
+    border-radius: 8px;
 }
 
 .divider {

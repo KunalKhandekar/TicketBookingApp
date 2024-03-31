@@ -1,16 +1,6 @@
 const trailer = document.querySelector('.trailer');
 const video = document.querySelector('#home-trailer');
 
-function PlayVideo() {
-    video.play();
-    trailer.classList.add('active');
-}
-
-function PauseVideo() {
-    video.pause();
-    trailer.classList.remove('active');
-}
-
 function changeContent(bg, title, year, duration, genre, description) {
     const banner = document.querySelector(".banner");
     const t = document.querySelector(".movie-title");
