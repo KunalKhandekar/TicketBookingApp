@@ -302,10 +302,11 @@ tabsBox.addEventListener("touchmove", drag);
 document.addEventListener("mouseup", stopDragging);
 document.addEventListener("touchend", stopDragging);
 
+// Function to Add rows and seats on the basis of selected date
 let addseats = (arr) => {
-    arr.forEach((el) => {
+    arr.forEach((el, index) => {
         const { series, bgImg, seat, price, a, b, c, d, e, f, g, h, i } = el;
-
+        let rowIndex = 0; // Variable to keep track of the row index
 
         for (let index = 0; index < series.length; index++) {
             let row = document.createElement('div');
@@ -313,20 +314,19 @@ let addseats = (arr) => {
 
             let booked_seats = [];
             booked_seats = [...eval(series[index].toLocaleLowerCase())];
-            // console.log(booked_seats);
 
             for (let seats = 0; seats < seat; seats++) {
 
                 if (seats === 0) {
                     let span = document.createElement('span');
                     span.innerText = series[index];
-                    row.appendChild(span)
+                    row.appendChild(span);
                 }
 
                 let li = document.createElement('div');
                 let filter = booked_seats.filter(el => {
                     return el === seats;
-                })
+                });
 
                 if (filter.length > 0) {
                     li.className = 'chair booked';
@@ -344,31 +344,41 @@ let addseats = (arr) => {
                     if (li.className === 'chair booked') {
                         li.classList.remove('selected');
                     } else {
-                        li.classList.toggle('selected')
+                        li.classList.toggle('selected');
                     }
 
                     let len = Array.from(document.getElementsByClassName('selected')).length;
                     if (len > 0) {
                         document.getElementById('button-n').style.display = 'flex';
-                        document.getElementById('button-n').scrollIntoView({behavior: "smooth"});
+                        document.getElementById('button-n').scrollIntoView({ behavior: "smooth" });
                     } else {
-                        document.getElementById('button-n').style.display = 'none'
+                        document.getElementById('button-n').style.display = 'none';
                     }
-                }
+                };
 
                 row.appendChild(li);
 
-                if (seats === seat-1) {
+                if (seats === seat - 1) {
                     let span = document.createElement('span');
                     span.innerText = series[index];
-                    row.appendChild(span)
+                    row.appendChild(span);
                 }
             }
 
             document.getElementById('seatsAdder').append(row);
+            rowIndex++;
+
+            // Add a blank row after the 2nd, 5th, and 8th rows
+            if (rowIndex === 2 || rowIndex === 5 || rowIndex === 8) {
+                let blankRow = document.createElement('div');
+                blankRow.className = 'blank-row';
+                document.getElementById('seatsAdder').appendChild(blankRow);
+            }
         }
-    })
-}
+    });
+};
+
+
 
 function filterPVRByDate(selectedDate) {
     try {
